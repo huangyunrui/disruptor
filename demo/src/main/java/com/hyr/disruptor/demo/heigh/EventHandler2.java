@@ -13,7 +13,7 @@ import java.util.UUID;
 public class EventHandler2 implements EventHandler<Trade> {
     @Override
     public void onEvent(Trade trade, long sequence, boolean endOfBatch) throws Exception {
-        System.err.println("设置编号："+trade.getPrice());
+        System.err.println("设置编号：EventHandler2:"+trade.getPrice());
         trade.setId(UUID.randomUUID().toString());
         Thread.sleep(2000);
     }

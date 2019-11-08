@@ -17,7 +17,7 @@ public class EventHandler1 implements EventHandler<Trade>, WorkHandler<Trade> {
 
     @Override
     public void onEvent(Trade trade) throws Exception {
-        System.err.println("设置名字："+trade.getPrice());
+        System.err.println("设置名字：EventHandler1:"+trade.getPrice());
         trade.setName("H1");
         Thread.sleep(1000);
     }

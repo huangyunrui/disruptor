@@ -11,7 +11,7 @@ import com.lmax.disruptor.EventHandler;
 public class EventHandler4 implements EventHandler<Trade> {
     @Override
     public void onEvent(Trade trade, long sequence, boolean endOfBatch) throws Exception {
-        System.err.println("Handler4：");
+        System.err.println("Handler4："+trade.getPrice());
         trade.setPrice(10.0);
     }
 }
