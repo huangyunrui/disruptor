@@ -1,8 +1,7 @@
-package com.hyr.disruptor.demo.heigh;
+package com.hyr.disruptor.demo.heigh.chain;
 
 import com.lmax.disruptor.*;
 import com.lmax.disruptor.dsl.Disruptor;
-import com.lmax.disruptor.dsl.EventHandlerGroup;
 import com.lmax.disruptor.dsl.ProducerType;
 
 import java.util.concurrent.CountDownLatch;

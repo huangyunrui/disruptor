@@ -1,6 +1,5 @@
-package com.hyr.disruptor.demo.heigh;
+package com.hyr.disruptor.demo.heigh.chain;
 
-import com.hyr.disruptor.demo.entity.OrderEvent;
 import com.lmax.disruptor.EventHandler;
 import com.lmax.disruptor.WorkHandler;
 
