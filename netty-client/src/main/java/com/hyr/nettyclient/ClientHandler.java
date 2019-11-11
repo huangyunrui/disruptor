@@ -1,5 +1,7 @@
 package com.hyr.nettyclient;
 
+import com.hyr.nettycom.disruptor.MessageProducer;
+import com.hyr.nettycom.disruptor.RingBufferWorkerPoolFactory;
 import com.hyr.nettycom.entity.TranslatorData;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -21,5 +23,10 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             //缓存要释放
             ReferenceCountUtil.release(msg);
         }*/
+
+        TranslatorData response = (TranslatorData) msg;
+        String producerId = "code:sessionId:002";
+        MessageProducer messageProducer = RingBufferWorkerPoolFactory.getInstance().getMessageProducer(producerId);
+        messageProducer.onData(response,ctx);
     }
 }

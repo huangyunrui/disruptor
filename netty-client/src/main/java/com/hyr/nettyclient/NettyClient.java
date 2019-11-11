@@ -61,7 +61,7 @@ public class NettyClient {
     }
 
     public TranslatorData sendData(TranslatorData data) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             TranslatorData request = new TranslatorData();
             request.setId("" + i);
             request.setName(i + "hello");

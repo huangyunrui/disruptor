@@ -25,9 +25,9 @@ public class RingBufferWorkerPoolFactory {
         return SingletonHolder.instance;
     }
 
-    private Map<String, MessageConsumer> consumers = new ConcurrentHashMap<String, MessageConsumer>();
+    private static Map<String, MessageConsumer> consumers = new ConcurrentHashMap<String, MessageConsumer>();
 
-    private Map<String, MessageProducer> producers = new ConcurrentHashMap<String, MessageProducer>();
+    private static Map<String, MessageProducer> producers = new ConcurrentHashMap<String, MessageProducer>();
 
     private RingBuffer<TranslatorDataWapper> ringBuffer;
     private SequenceBarrier sequenceBarrier;

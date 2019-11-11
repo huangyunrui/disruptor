@@ -9,7 +9,7 @@ import com.lmax.disruptor.WorkHandler;
  * */
 public abstract class MessageConsumer implements WorkHandler<TranslatorDataWapper> {
 
-    private String consumerId;
+    protected String consumerId;
 
     public MessageConsumer(String consumerId) {
         this.consumerId = consumerId;
